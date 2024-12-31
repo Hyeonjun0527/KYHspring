@@ -5,13 +5,7 @@ public class MemberServiceImpl implements MemberService{
     /**
      * 회원 가입하고 조회하려면 뭐가 필요하지? 저장소가 필요하다.
      */
-//    private final MemberRepository memberRepository = new MemoryMemberRepository();
-
-    private final MemberRepository memberRepository;
-
-    public MemberServiceImpl(MemberRepository memberRepository) {
-        this.memberRepository = memberRepository;
-    }
+    private final MemberRepository memberRepository = new MemoryMemberRepository();
 
     @Override
     public void join(Member member) {
