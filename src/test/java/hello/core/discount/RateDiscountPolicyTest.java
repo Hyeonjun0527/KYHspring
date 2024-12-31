@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.*;
 
 class RateDiscountPolicyTest {
     DiscountPolicy rateDiscountPolicy = new RateDiscountPolicy();
-
+    //dkdk
 
     @Test
     @DisplayName("VIP는 10%할인이 적용되어야 한다.")
