@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class ApplicationContextInfoTest {
+public class ApplicationContextInfoTest1 {
 
     AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
     
@@ -18,7 +18,7 @@ public class ApplicationContextInfoTest {
         //단축키 iter, soutm soutv
         for (String beanDefinitionName : beanDefinitionNames) {
             Object bean = ac.getBean(beanDefinitionName);
-            System.out.println("name = " + beanDefinitionName + "object = " + bean);
+            System.out.println("name = " + beanDefinitionName + " object = " + bean);
         }
 
     }
@@ -34,16 +34,13 @@ public class ApplicationContextInfoTest {
             //직접 등록한 애플리케이션 빈
             if (beanDefinition.getRole() == BeanDefinition.ROLE_APPLICATION) {
                 Object bean = ac.getBean(beanDefinitionName);
-                System.out.println("name = " + beanDefinitionName + "object = " + bean);
+                System.out.println("name = " + beanDefinitionName + " object = " + bean);
             }
             // 스프링 내부에서 사용하는 빈
 //            if (beanDefinition.getRole() == BeanDefinition.ROLE_INFRASTRUCTURE) {
 //                Object bean = ac.getBean(beanDefinitionName);
 //                System.out.println("name = " + beanDefinitionName + "object = " + bean);
 //            }
-
-
-
         }
 
     }
