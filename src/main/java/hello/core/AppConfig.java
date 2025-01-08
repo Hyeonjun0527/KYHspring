@@ -41,3 +41,8 @@ public class AppConfig {
         return new RateDiscountPolicy();
     }
 }
+
+
+/*
+저렇게 Bean 이라고 해놓고 return 하면 저 객체가 스프링 컨테이너에서 관리가 된다.
+* */
